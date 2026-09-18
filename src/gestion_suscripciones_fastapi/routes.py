@@ -1,5 +1,4 @@
 import datetime
-from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel import Session, select
 
@@ -46,7 +45,7 @@ def crear_servicio(servicio: Servicio, session: Session = Depends(get_session)):
 
 @router.get(
     "/", 
-    response_model=List[Servicio],
+    response_model=list[Servicio],
     summary="Listar todos los servicios registrados"
 )
 def listar_servicios(session: Session = Depends(get_session)):
@@ -58,7 +57,7 @@ def listar_servicios(session: Session = Depends(get_session)):
     return servicios
 @router.get(
     "/activos", 
-    response_model=List[Servicio],
+    response_model=list[Servicio],
     summary="Listar únicamente los servicios que no están vencidos"
 )
 def listar_servicios_activos(session: Session = Depends(get_session)):
