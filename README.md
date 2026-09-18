@@ -8,7 +8,7 @@ Este repositorio representa el hito evolutivo de nivel **Semi-Senior**, donde se
 
 ## 🛠️ Stack Tecnológico
 
-- **[Python 3.12+]**: Uso de tipado estricto y la librería nativa `typing` (`Optional`, `List`) para asegurar contratos de datos limpios.
+- **[Python 3.14+]**: Uso de tipado estricto para asegurar contratos de datos limpios.
 - **[FastAPI]**: Framework web asíncrono de alto rendimiento utilizado para la exposición de endpoints y la generación automática de documentación.
 - **[SQLModel]**: Un ORM híbrido moderno (basado en SQLAlchemy y Pydantic) que unifica la definición de esquemas de bases de datos y la validación de peticiones HTTP en una sola clase de Python.
 - **[PostgreSQL 16]**: Motor de base de datos relacional robusto utilizado como capa de persistencia definitiva.
@@ -75,4 +75,4 @@ Sigue estos pasos para clonar el proyecto, inicializar la base de datos distribu
     uv run uvicorn gestion_suscripciones_fastapi.main:app --reload
     ```
 4.  **Acceder a la documentación interactiva:**
-    Abre tu navegador e ingresa a: [http://127.0.0](http://127.0.0)
+    Abre tu navegador e ingresa a: [http://localhost:8000/docs#/](http://localhost:8000/docs)
